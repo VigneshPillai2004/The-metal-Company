@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Metal Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XzHyeLmRjIoKAxiijGwga4TK4MnLKmj/86elgkPhUkK04gjIGn60Ov4Cp+SL2AHCSZS2vq7fWtENB+JxLmNlfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="Sub-header">
+        <nav>
+            <a href="index.html"><img src="LOGO.png" alt="THE METAL company"></a>
+            <div class="nav-links" >
+                
+                <ul>
+                    <li><a href="index.html">HOME</a></li> 
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>  
+        </nav>
+        <h1>CONTACT US</h1>
+        <form onsubmit="sendEmail();reset();return false;">
+            <h2>CONTACT US</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <input type="submit" value="Send">
+        </form>
+        
+
+
+    <section class="Location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.03900799053!2d72.88118615!3d19.082250749999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709488567852!5m2!1sen!2sin"
+     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+
+
+    
+   </section>
+      
+
+
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script>
+       function sendEmail(){
+           Email.send({
+               Host: "smtp.gmail.com",
+               Username: "dummyplayer1021@gmail.com",
+               Password: "dummyplayer1021**",
+               To: 'vignesh2004pillai@gmail.com',
+               From: document.getElementById("email").value,
+               Subject: "New contact from enquiry",
+               Body: "And this is the body"
+           }).then(message => alert(message));
+       }
+   </script>
+   
+   <footer>
+    <div class="container">
+        <div class="footer-col">
+            <h2>Logo</h2>
+            <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt labore quod ipsa eos magnam? Architecto quas magnam mollitia nemo
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3 class="text-office">
+                Office
+                <div class="underline"><span></span></div>
+            </h3>
+            <p>Street No 5</p>
+            <p>Gulistan Colony</p>
+            <p>Faisalabad Punjab, Pakistan</p>
+
+            <p class="email">info.finegap@gmail.com</p>
+            <p class="phone">+92 304 110 0028</p>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Menu
+                <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Newsletter
+                <div class="underline"><span></span></div>
+            </h3>
+            <form action="">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Enter Company Email">
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+        </div>
+    </div>  
+</footer>
+
+
+
+</body>
+</html>
